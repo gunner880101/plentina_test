@@ -33,7 +33,8 @@ fun MatchCard(
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color.White),
+            .background(Color.White)
+            .padding(4.dp),
         elevation = 2.dp
     ) {
         Box(
@@ -90,7 +91,6 @@ fun MatchCard(
                         fontFamily = fontFamily
                     )
                 }
-
                 Image(
                     painter = rememberImagePainter(
                         data = matchInfo.thumbnail,
