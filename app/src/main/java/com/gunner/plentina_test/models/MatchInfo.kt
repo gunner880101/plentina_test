@@ -7,5 +7,5 @@ data class MatchInfo(
     val competitionUrl: String,
     val thumbnail: String,
     val date: String,
-    val videos: String,
+    val videos: List<VideoInfo>,
 )
