@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.gunner.plentina_test.models.MatchInfo
 
 /**
 Created by GUNNER on 2021-11-07 17:15

@@ -1,7 +1,5 @@
 package com.gunner.plentina_test.navigation
 
-import com.gunner.plentina_test.models.MatchInfo
-
 /**
 Created by GUNNER on 2021-11-07 17:19
 

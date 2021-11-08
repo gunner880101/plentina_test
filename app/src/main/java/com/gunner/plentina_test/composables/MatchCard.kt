@@ -21,19 +21,16 @@ import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
 import coil.size.Scale
 import com.gunner.plentina_test.R
-import com.gunner.plentina_test.fontFamily
+import com.gunner.plentina_test.utils.fontFamily
 import com.gunner.plentina_test.models.MatchInfo
 import com.gunner.plentina_test.navigation.Screen
-import com.gunner.plentina_test.strToDateTime
+import com.gunner.plentina_test.utils.strToDateTime
 
 @ExperimentalCoilApi
 @Composable
 fun MatchCard(
     matchInfo: MatchInfo,
     navController: NavController,
-    index: Int,
-    selectedIndex: Int,
-    onClick: (Int) -> Unit
 ) {
 
     val teams = matchInfo.title.split("-")

@@ -1,6 +1,5 @@
 package com.gunner.plentina_test.services
 
-import com.gunner.plentina_test.models.MatchInfo
 import com.gunner.plentina_test.models.ResponseInfo
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

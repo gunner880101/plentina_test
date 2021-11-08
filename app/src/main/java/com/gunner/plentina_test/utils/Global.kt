@@ -1,9 +1,10 @@
-package com.gunner.plentina_test
+package com.gunner.plentina_test.utils
 
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
+import com.gunner.plentina_test.R
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 

@@ -1,4 +1,4 @@
-package com.gunner.plentina_test.composables
+package com.gunner.plentina_test.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavType
@@ -6,7 +6,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.gunner.plentina_test.navigation.Screen
+import com.gunner.plentina_test.composables.MatchDetail
+import com.gunner.plentina_test.composables.MatchList
 import com.gunner.plentina_test.viewmodels.MatchViewModel
 
 /**
