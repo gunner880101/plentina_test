@@ -1,5 +1,6 @@
 package com.gunner.plentina_test.composables
 
+import android.net.Uri
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -20,10 +21,11 @@ import androidx.navigation.NavController
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
 import coil.size.Scale
+import com.google.gson.Gson
 import com.gunner.plentina_test.R
-import com.gunner.plentina_test.utils.fontFamily
 import com.gunner.plentina_test.models.MatchInfo
 import com.gunner.plentina_test.navigation.Screen
+import com.gunner.plentina_test.utils.fontFamily
 import com.gunner.plentina_test.utils.strToDateTime
 
 @ExperimentalCoilApi
@@ -40,8 +42,8 @@ fun MatchCard(
             .background(Color.White)
             .padding(4.dp)
             .clickable {
-
-                navController.navigate(Screen.MatchDetail.withArgs(matchInfo.title))
+                val json = Uri.encode(Gson().toJson(matchInfo))
+                navController.navigate(Screen.MatchDetail.route + "/$json")
             },
         elevation = 2.dp,
     ) {
