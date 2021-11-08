@@ -2,6 +2,7 @@ package com.gunner.plentina_test.composables
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
@@ -15,18 +16,24 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
 import coil.size.Scale
 import com.gunner.plentina_test.R
 import com.gunner.plentina_test.fontFamily
 import com.gunner.plentina_test.models.MatchInfo
+import com.gunner.plentina_test.navigation.Screen
 import com.gunner.plentina_test.strToDateTime
 
 @ExperimentalCoilApi
 @Composable
 fun MatchCard(
-    matchInfo: MatchInfo, index: Int, selectedIndex: Int, onClick: (Int) -> Unit
+    matchInfo: MatchInfo,
+    navController: NavController,
+    index: Int,
+    selectedIndex: Int,
+    onClick: (Int) -> Unit
 ) {
 
     val teams = matchInfo.title.split("-")
@@ -34,8 +41,12 @@ fun MatchCard(
         modifier = Modifier
             .fillMaxWidth()
             .background(Color.White)
-            .padding(4.dp),
-        elevation = 2.dp
+            .padding(4.dp)
+            .clickable {
+
+                navController.navigate(Screen.MatchDetail.withArgs(matchInfo.title))
+            },
+        elevation = 2.dp,
     ) {
         Box(
             modifier = Modifier

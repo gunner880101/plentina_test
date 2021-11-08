@@ -70,4 +70,7 @@ dependencies {
 
     // Import the Firebase BoM
     implementation platform('com.google.firebase:firebase-bom:29.0.0')
+
+    // Navigation compose
+    implementation("androidx.navigation:navigation-compose:2.4.0-beta02")
 }
